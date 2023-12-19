@@ -1,0 +1,19 @@
+{
+  "Title": "Tony Cube",
+  "Type": "content",
+  "Org": "local",
+  "Ident": "tony_cube",
+  "Tags": null,
+  "Schema": 1,
+  "HasAssets": true,
+  "AssetsPath": "",
+  "Resources": null,
+  "MenuResources": "*",
+  "HasCode": false,
+  "CodePath": null,
+  "PackageReferences": [],
+  "EditorReferences": null,
+  "Metadata": {
+    "ProjectTemplate": null
+  }
+}
