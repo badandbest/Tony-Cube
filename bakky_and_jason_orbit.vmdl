@@ -1,0 +1,151 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc29:version{3cec427c-1b0e-4d48-a90a-0436f33a6041} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderPrimitiveSphere"
+						name = "planet"
+						parent_bone = "Planet"
+						material_name = "materials/bakscratch.vmat"
+						origin = [ 0.0, 0.0, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						max_u = 1.0
+						max_v = 1.0
+						radius = 50.0
+						segments_u = 16
+						segments_v = 16
+					},
+					{
+						_class = "RenderPrimitiveSphere"
+						name = "moon"
+						parent_bone = "Moon"
+						material_name = "materials/jason.vmat"
+						origin = [ 0.0, 0.0, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						max_u = 1.0
+						max_v = 1.0
+						radius = 16.66666
+						segments_u = 16
+						segments_v = 16
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "orbit"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						enable_scale = false
+						source_filename = "animations/orbit.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 1
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
+			},
+			{
+				_class = "Skeleton"
+				children = 
+				[
+					{
+						_class = "Bone"
+						name = "Planet"
+						children = 
+						[
+							{
+								_class = "Bone"
+								name = "Moon"
+								origin = [ -96.0, 0.0, 0.0 ]
+								angles = [ 0.0, 0.0, 0.0 ]
+								do_not_discard = true
+							},
+						]
+						origin = [ 0.0, 0.0, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						do_not_discard = true
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeSphere"
+						parent_bone = "Planet"
+						surface_prop = "flesh"
+						collision_tags = "solid"
+						radius = 50.0
+						center = [ 0.0, 0.0, 0.0 ]
+					},
+					{
+						_class = "PhysicsShapeSphere"
+						parent_bone = "Moon"
+						surface_prop = "flesh"
+						collision_tags = "solid"
+						radius = 16.6667
+						center = [ 0.0, 0.0, 0.0 ]
+					},
+				]
+			},
+			{
+				_class = "HitboxSetList"
+				children = 
+				[
+					{
+						_class = "HitboxSet"
+						name = "orbit"
+						children = 
+						[
+							{
+								_class = "HitboxSphere"
+								parent_bone = "Planet"
+								surface_property = "flesh"
+								translation_only = false
+								tags = ""
+								center = [ 0.0, 0.0, 0.0 ]
+								radius = 50.0
+							},
+							{
+								_class = "HitboxSphere"
+								parent_bone = "Moon"
+								surface_property = "flesh"
+								translation_only = false
+								tags = ""
+								center = [ 0.0, 0.0, 0.0 ]
+								radius = 16.6667
+							},
+						]
+					},
+				]
+			},
+		]
+		model_archetype = "animated_model"
+		primary_associated_entity = "prop_dynamic"
+		anim_graph_name = "animations/orbit.vanmgrph"
+		base_model_name = ""
+	}
+}
