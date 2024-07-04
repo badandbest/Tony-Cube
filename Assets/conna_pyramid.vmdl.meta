@@ -1,6 +1,5 @@
 {
   "publish": {
-    "Allowed": true,
     "Enabled": true,
     "ProjectConfig": {
       "Title": "Conna Pyramid",
@@ -9,12 +8,8 @@
       "Ident": "conna_pyramid",
       "Tags": null,
       "Schema": 0,
-      "HasAssets": false,
-      "AssetsPath": null,
-      "Resources": null,
-      "MenuResources": "*",
-      "HasCode": false,
-      "CodePath": null,
+      "IncludeSourceFiles": false,
+      "Resources": "",
       "PackageReferences": null,
       "EditorReferences": null,
       "Metadata": {

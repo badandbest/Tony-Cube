@@ -10,30 +10,33 @@
 				children = 
 				[
 					{
-						_class = "RenderPrimitiveSphere"
-						name = "planet"
-						parent_bone = "Planet"
-						material_name = "materials/bakscratch.vmat"
-						origin = [ 0.0, 0.0, 0.0 ]
-						angles = [ 0.0, 0.0, 0.0 ]
+						_class = "RenderPrimitivePlane"
+						name = "plane"
+						parent_bone = "Bone"
+						material_name = "materials/carson.vmat"
+						origin = [ 0.05, 0.0, 0.0 ]
+						angles = [ 90.0, 0.0, 0.0 ]
 						max_u = 1.0
 						max_v = 1.0
-						radius = 50.0
-						segments_u = 16
-						segments_v = 16
+						width = 50.0
+						height = 50.0
+						segments_x = 1
+						segments_y = 1
 					},
 					{
-						_class = "RenderPrimitiveSphere"
-						name = "moon"
-						parent_bone = "Moon"
-						material_name = "materials/jason.vmat"
-						origin = [ 0.0, 0.0, 0.0 ]
-						angles = [ 0.0, 0.0, 0.0 ]
+						_class = "RenderPrimitiveBox"
+						name = "plane_backface"
+						parent_bone = "Bone"
+						material_name = "materials/carson.vmat"
+						origin = [ -0.05, 0.0, 0.0 ]
+						angles = [ 180.0, 90.0, 0.0 ]
 						max_u = 1.0
 						max_v = 1.0
-						radius = 16.66666
-						segments_u = 16
-						segments_v = 16
+						dimensions = [ 50.0, 0.0, 50.0 ]
+						segments_x = 1
+						segments_y = 1
+						segments_z = 1
+						invert = false
 					},
 				]
 			},
@@ -43,7 +46,7 @@
 				[
 					{
 						_class = "AnimFile"
-						name = "spin"
+						name = "rotate"
 						activity_name = ""
 						activity_weight = 1
 						weight_list_name = ""
@@ -55,8 +58,9 @@
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
+						disable_interpolation = false
 						enable_scale = false
-						source_filename = "animations/orbit.fbx"
+						source_filename = "animations/rotate.fbx"
 						start_frame = -1
 						end_frame = -1
 						framerate = -1.0
@@ -72,17 +76,7 @@
 				[
 					{
 						_class = "Bone"
-						name = "Planet"
-						children = 
-						[
-							{
-								_class = "Bone"
-								name = "Moon"
-								origin = [ -96.0, 0.0, 0.0 ]
-								angles = [ 0.0, 0.0, 0.0 ]
-								do_not_discard = true
-							},
-						]
+						name = "Bone"
 						origin = [ 0.0, 0.0, 0.0 ]
 						angles = [ 0.0, 0.0, 0.0 ]
 						do_not_discard = true
@@ -94,20 +88,13 @@
 				children = 
 				[
 					{
-						_class = "PhysicsShapeSphere"
-						parent_bone = "Planet"
+						_class = "PhysicsShapeBox"
+						parent_bone = "Bone"
 						surface_prop = "flesh"
 						collision_tags = "solid"
-						radius = 50.0
-						center = [ 0.0, 0.0, 0.0 ]
-					},
-					{
-						_class = "PhysicsShapeSphere"
-						parent_bone = "Moon"
-						surface_prop = "flesh"
-						collision_tags = "solid"
-						radius = 16.6667
-						center = [ 0.0, 0.0, 0.0 ]
+						origin = [ 0.0, 0.0, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.1, 50.0, 50.0 ]
 					},
 				]
 			},
@@ -117,26 +104,17 @@
 				[
 					{
 						_class = "HitboxSet"
-						name = "orbit"
+						name = "box"
 						children = 
 						[
 							{
-								_class = "HitboxSphere"
-								parent_bone = "Planet"
+								_class = "Hitbox"
+								parent_bone = "Bone"
 								surface_property = "flesh"
 								translation_only = false
 								tags = ""
-								center = [ 0.0, 0.0, 0.0 ]
-								radius = 50.0
-							},
-							{
-								_class = "HitboxSphere"
-								parent_bone = "Moon"
-								surface_property = "flesh"
-								translation_only = false
-								tags = ""
-								center = [ 0.0, 0.0, 0.0 ]
-								radius = 16.6667
+								hitbox_mins = [ -0.05, -25.0, -25.0 ]
+								hitbox_maxs = [ 0.05, 25.0, 25.0 ]
 							},
 						]
 					},

@@ -1,0 +1,20 @@
+{
+  "publish": {
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "Carson Plane",
+      "Type": "model",
+      "Org": "videogames",
+      "Ident": "carson_plane",
+      "Tags": null,
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": "",
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "Metadata": {
+        "SingleAssetSource": "carson_plane.vmdl"
+      }
+    }
+  }
+}

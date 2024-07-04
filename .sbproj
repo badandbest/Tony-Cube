@@ -5,12 +5,8 @@
   "Ident": "tony_cube",
   "Tags": null,
   "Schema": 1,
-  "HasAssets": true,
-  "AssetsPath": "",
+  "IncludeSourceFiles": false,
   "Resources": null,
-  "MenuResources": "*",
-  "HasCode": false,
-  "CodePath": null,
   "PackageReferences": [],
   "EditorReferences": null,
   "Metadata": {
