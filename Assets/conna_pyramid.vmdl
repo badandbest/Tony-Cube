@@ -18,7 +18,7 @@
 						align_origin_x_type = "None"
 						align_origin_y_type = "None"
 						align_origin_z_type = "None"
-						parent_bone = "Bone"
+						parent_bone = ""
 						import_filter = 
 						{
 							exclude_by_default = false
@@ -33,7 +33,7 @@
 				[
 					{
 						_class = "AnimFile"
-						name = "spin"
+						name = "idle"
 						activity_name = ""
 						activity_weight = 1
 						weight_list_name = ""
@@ -47,28 +47,15 @@
 						disable_compression = false
 						disable_interpolation = false
 						enable_scale = false
-						source_filename = "animations/rotate.fbx"
+						source_filename = "models/pyramid.fbx"
 						start_frame = -1
 						end_frame = -1
 						framerate = -1.0
-						take = 3
+						take = 5
 						reverse = false
 					},
 				]
 				default_root_bone_name = ""
-			},
-			{
-				_class = "Skeleton"
-				children = 
-				[
-					{
-						_class = "Bone"
-						name = "Bone"
-						origin = [ 0.0, 0.0, 0.0 ]
-						angles = [ 0.0, 0.0, 0.0 ]
-						do_not_discard = true
-					},
-				]
 			},
 			{
 				_class = "PhysicsShapeList"
@@ -76,8 +63,7 @@
 				[
 					{
 						_class = "PhysicsHullFile"
-						name = "pyramid"
-						parent_bone = "Bone"
+						parent_bone = ""
 						surface_prop = "flesh"
 						collision_tags = "solid"
 						recenter_on_parent_bone = false
@@ -111,7 +97,7 @@
 						[
 							{
 								_class = "Hitbox"
-								parent_bone = "Bone"
+								parent_bone = ""
 								surface_property = "flesh"
 								translation_only = false
 								tags = ""
