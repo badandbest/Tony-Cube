@@ -39,7 +39,7 @@
 						weight_list_name = ""
 						fade_in_time = 0.2
 						fade_out_time = 0.2
-						looping = false
+						looping = true
 						delta = false
 						worldSpace = false
 						hidden = false
@@ -129,7 +129,7 @@
 		]
 		model_archetype = "animated_model"
 		primary_associated_entity = "prop_dynamic"
-		anim_graph_name = "animations/spin.vanmgrph"
+		anim_graph_name = "models/idle.vanmgrph"
 		base_model_name = ""
 	}
 }

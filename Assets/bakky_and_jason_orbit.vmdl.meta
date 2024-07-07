@@ -1,20 +1,14 @@
 {
   "publish": {
-    "Allowed": true,
     "Enabled": true,
     "ProjectConfig": {
       "Title": "Bakscratch and Jason spheres",
       "Type": "model",
       "Org": "videogames",
       "Ident": "bakscratch_and_jason_spheres",
-      "Tags": null,
       "Schema": 0,
-      "HasAssets": false,
-      "AssetsPath": null,
+      "IncludeSourceFiles": false,
       "Resources": null,
-      "MenuResources": "*",
-      "HasCode": false,
-      "CodePath": null,
       "PackageReferences": null,
       "EditorReferences": null,
       "Metadata": {

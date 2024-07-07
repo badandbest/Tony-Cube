@@ -1,7 +1,7 @@
 {
   "Title": "Tony Cube",
   "Type": "content",
-  "Org": "local",
+  "Org": "videogames",
   "Ident": "tony_cube",
   "Schema": 1,
   "IncludeSourceFiles": false,
