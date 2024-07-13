@@ -1,0 +1,19 @@
+{
+  "publish": {
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "garry_tesseract",
+      "Type": "model",
+      "Org": "videogames",
+      "Ident": "garry_tesseract",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "Metadata": {
+        "SingleAssetSource": "garry_tesseract.vmdl"
+      }
+    }
+  }
+}
